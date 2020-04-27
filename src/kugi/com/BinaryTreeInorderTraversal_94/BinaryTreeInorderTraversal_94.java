@@ -16,37 +16,36 @@ public class BinaryTreeInorderTraversal_94 {
         root.left = t1;
         root.right = t2;
         root.right.left = t3;
-        List<Integer> ans = solution.preorderTraversal2(root);
+        List<Integer> ans = solution.inorderTraversal2(root);
     }
 }
 
 class Solution {
     List<Integer> list = new ArrayList<>();
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) return list;
 
+        inorderTraversal(root.left);
         list.add(root.val);
-
-        preorderTraversal(root.left);
-        preorderTraversal(root.right);
+        inorderTraversal(root.right);
 
         return list;
     }
 
-    public List<Integer> preorderTraversal2(TreeNode root) {
+    public List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
 
-        TreeNode curr = root;
-        while (!stack.isEmpty()) {
-            if (curr != null) {
-                System.out.println(curr.val);
-                result.add(curr.val);
-                stack.push(curr.right);
-                stack.push(curr.left);
+        TreeNode current = root;
+        while(current != null || !stack.isEmpty()) {
+            while (current != null) {
+                stack.push(current);
+                current = current.left;
             }
-            curr = stack.pop();
+            current = stack.pop();
+            System.out.println(current.val);
+            result.add(current.val);
+            current = current.right;
         }
         return result;
     }
