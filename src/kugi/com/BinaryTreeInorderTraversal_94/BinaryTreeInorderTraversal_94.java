@@ -1,4 +1,4 @@
-package kugi.com;
+package kugi.com.BinaryTreeInorderTraversal_94;
 
 import kugi.com.data.TreeNode;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class BinaryTreePreorderTraversal_144 {
+public class BinaryTreeInorderTraversal_94 {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         TreeNode t1 = null;
