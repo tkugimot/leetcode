@@ -4,6 +4,7 @@ import kugi.com.data.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class BinaryTreePreorderTraversal_144 {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class BinaryTreePreorderTraversal_144 {
         root.left = t1;
         root.right = t2;
         root.right.left = t3;
-        List<Integer> ans = solution.preorderTraversal(root);
+        List<Integer> ans = solution.preorderTraversal2(root);
     }
 }
 
@@ -30,5 +31,23 @@ class Solution {
         preorderTraversal(root.right);
 
         return list;
+    }
+
+    public List<Integer> preorderTraversal2(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        TreeNode curr = root;
+        while (!stack.isEmpty()) {
+            if (curr != null) {
+                System.out.println(curr.val);
+                result.add(curr.val);
+                stack.push(curr.right);
+                stack.push(curr.left);
+            }
+            curr = stack.pop();
+        }
+        return result;
     }
 }
