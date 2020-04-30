@@ -1,10 +1,6 @@
-package kugi.com.MaximumDepthofBinaryTree_104;
+package kugi.com.BinaryTree.MaximumDepthofBinaryTree_104;
 
 import kugi.com.data.TreeNode;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
 
 public class MaximumDepthofBinaryTree_104 {
     public static void main(String[] args) {

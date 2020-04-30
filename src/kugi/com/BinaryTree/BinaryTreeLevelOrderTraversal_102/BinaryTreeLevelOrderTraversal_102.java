@@ -1,4 +1,4 @@
-package kugi.com.BinaryTreeLevelOrderTraversal_102;
+package kugi.com.BinaryTree.BinaryTreeLevelOrderTraversal_102;
 
 import kugi.com.data.TreeNode;
 

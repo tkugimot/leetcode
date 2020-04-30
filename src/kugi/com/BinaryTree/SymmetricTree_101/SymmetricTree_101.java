@@ -1,4 +1,4 @@
-package kugi.com.SymmetricTree_101;
+package kugi.com.BinaryTree.SymmetricTree_101;
 
 import kugi.com.data.TreeNode;
 

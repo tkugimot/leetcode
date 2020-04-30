@@ -1,4 +1,4 @@
-package kugi.com.PathSum_112;
+package kugi.com.BinaryTree.PathSum_112;
 
 import kugi.com.data.TreeNode;
 
