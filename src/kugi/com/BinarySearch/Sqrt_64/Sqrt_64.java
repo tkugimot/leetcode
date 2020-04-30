@@ -3,7 +3,7 @@ package kugi.com.BinarySearch.Sqrt_64;
 public class Sqrt_64 {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int ans = solution.mySqrt(15);
+        int ans = solution.mySqrt(2147395599);
         System.out.println(ans);
     }
 }
@@ -11,13 +11,14 @@ public class Sqrt_64 {
 class Solution {
     public int mySqrt(int x) {
         if (x < 1) return 0;
-        int left = 1;
-        int right = x;
+        if (x == 1) return 1;
+        long left = 1;
+        long right = x;
 
         while (left < right) {
-            int mid = left + (right - left) / 2;
+            long mid = left + (right - left) / 2;
 
-            if (mid * mid == x) return mid;
+            if (mid * mid == x) return (int)mid;
 
             if (mid * mid < x) {
                 left = mid + 1;
@@ -26,6 +27,6 @@ class Solution {
             }
         }
 
-        return left - 1;
+        return (int)left - 1;
     }
 }
