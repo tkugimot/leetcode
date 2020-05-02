@@ -1,5 +1,6 @@
 package kugi.com.data;
 
+
 public class ListNode {
     public int val;
     public ListNode next;
