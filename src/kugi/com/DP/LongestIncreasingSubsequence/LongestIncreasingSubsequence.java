@@ -1,4 +1,4 @@
-package kugi.com.DP;
+package kugi.com.DP.LongestIncreasingSubsequence;
 
 public class LongestIncreasingSubsequence {
 
